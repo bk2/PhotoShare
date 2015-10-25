@@ -1,0 +1,29 @@
+<div class="row" id="picture_show">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading picture_image">
+        <%= image_tag @picture.image.url %>
+      </div>
+      <div class="panel-body">
+        <h1>
+          <%= @picture.title %>
+        </h1>
+        <p class="description">
+          <%= @picture.description %>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          
+          <div class="col-md-6">
+            <div class="btn-group pull-right">
+              <%= link_to "Edit", edit_picture_path, class: "btn btn-default" %>
+              <%= link_to "Delete", picture_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
