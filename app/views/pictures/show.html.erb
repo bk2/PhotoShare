@@ -27,3 +27,23 @@
   </div>
 </div>
 
+
+<div class='container'>
+    <div class='row' id='picture_show'>
+        <div class='col-md-6 col-md-offset-3'>
+            <div class='panel panel-default'>
+                 <div class='panel-heading'>
+                    <h4><%= pluralize(@picture.comments.count, "comment") %></h4>
+                </div>
+                <div class='panel-body'>
+                    <% @comments.each do |comment| %>
+                        <p class='comment-body'><%= comment.body %></p>
+                        <hr>
+                    <% end %>
+                <%= render 'comments/form' %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

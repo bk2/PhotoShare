@@ -20,6 +20,7 @@ class PicturesController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(picture_id: @picture)
   end
 
   def edit
